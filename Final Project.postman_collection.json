@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "bac82d80-5e01-4aa9-b403-000c429e58cc",
+		"name": "Udacity Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TASKs",
+			"item": [
+				{
+					"name": "Get all tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/tasks",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Water flowers\",\n\t\"dueDate\": \"2019-06-11\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/tasks",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Change the world\",\n\t\"dueDate\": \"2019-12-11\",\n\t\"done\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/tasks/35dd600f-43c2-4649-903c-615e1586a26f",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"tasks",
+								"35dd600f-43c2-4649-903c-615e1586a26f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/tasks/fe671583-4512-45f6-9475-4265c04362fb",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"tasks",
+								"fe671583-4512-45f6-9475-4265c04362fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/tasks/3836b777-9bc4-4429-9b79-ba4e4f5f91c0/attachment",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"tasks",
+								"3836b777-9bc4-4429-9b79-ba4e4f5f91c0",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "44929bbf-da43-4472-872d-66ce9288c693",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee535df0-3f46-479f-8183-f9e2d11bd20e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "65d363b5-1e2e-425e-99b5-94051410a104",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a7fa3ba6-b29c-4b00-826e-d1713ffd8fb6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "57d95aa7-fad3-4a07-bc9e-ed2160fef123",
+			"key": "apiId",
+			"value": "ud06arlxik",
+			"type": "string"
+		},
+		{
+			"id": "edc30403-f096-4a53-9c5f-87577dfb9a05",
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InNPaC1oVjZ4bm9uSUhmQVNHeFp6MSJ9.eyJpc3MiOiJodHRwczovL29mYS5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDAxNTAyODQwNDM0NzU3Mjg5OTYiLCJhdWQiOiJSdDVTWVN3RUFJQmtKSTBEWWt5Uk9LQXBES2hUaTQwNiIsImlhdCI6MTU5MDM1Mzc5NCwiZXhwIjoxNTkwMzg5Nzk0LCJhdF9oYXNoIjoiaFpodXhiMlJfcXExVEo1R21WRzd1USIsIm5vbmNlIjoiWHM3LnN-ZTZSaThRdGhOckZWdzB5Uk9xQk0zNGh0OTkifQ.dWBtBEXhmEKbhMu3BT7CNHpN_Xzdsnc-VpmB7YR1u68pk3YBK2CwazEMq2FAZ5J4Mw10H7i-bIKzCN5h_su1pXUVNlFXOZyDe7tW3nW-_gz2PVwrhzZkY-oNRKpn0vBaPDzouajpJ6Aq5ozREow1yih_BsYilYtFw2OR81sGQiT6aEa41uxm4Fa1oV7S8IqO3Igm5_QEt5qwJohtzy9hImn7jA0LAESZxf0Xsa9nRQPqhos8capcsN_K86j8td1zkKZDymmhSJUD7HRhhwI-C4xvjFEdXxCgT2ufD5DFr1isHBxw_OGYo5ev6usZyvfATvppXKPzijOOOFWCcM0yhQ",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
